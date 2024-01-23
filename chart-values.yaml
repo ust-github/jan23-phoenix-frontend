@@ -1,0 +1,14 @@
+image:
+  repository: artifactory.dagility.com/docker/jan23-phoenix-frontend
+  tag: latest
+  pullPolicy: Always
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  hosts:
+  - host: jan23-phoenix-frontend-habitat-prod.dagility.com
+    paths:
+    - /
+serviceAccount:
+  create: false
